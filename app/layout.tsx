@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import { ThemeProvider } from 'next-themes';
 import { AnimatedGroup } from '@/components/ui/animated-group';
-import ClientLayout from '@/components/clientsLayout';
 import './globals.css';
+import Navbar from '@/components/navbar';
+import Footer from '@/components/footer';
 
 const transitionVariants = {
 	item: {
@@ -38,9 +39,9 @@ export default function RootLayout({
 		<html lang="en" suppressHydrationWarning>
 			<body className="antialiased">
 				<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-					<AnimatedGroup variants={transitionVariants}>
-						<ClientLayout>{children}</ClientLayout>
-					</AnimatedGroup>
+					<Navbar />
+					<AnimatedGroup variants={transitionVariants}>{children}</AnimatedGroup>
+					<Footer />
 				</ThemeProvider>
 			</body>
 		</html>
