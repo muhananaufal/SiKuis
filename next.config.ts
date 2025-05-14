@@ -1,7 +1,9 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  /* config options here */
+	images: {
+		domains: ['ik.imagekit.io', 'alt.tailus.io'],
+	},
 };
 
 export default nextConfig;
