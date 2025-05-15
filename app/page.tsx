@@ -21,8 +21,8 @@ export default function HomePage() {
 		<>
 			<Hero />
 			<LogoCloud />
-			<Integrations />
 			<Stats />
+			<Integrations />
 			<Features />
 			<Testimonials />
 			<FAQ />
