@@ -3,20 +3,20 @@ import { cn } from '@/lib/utils';
 import { motion, MotionValue } from 'motion/react';
 import React from 'react';
 import { Gemini } from '../logos';
+import { AuroraText } from './aurora-text';
 
 const transition = {
 	duration: 0,
 	ease: 'linear',
 };
 
-export const GoogleGeminiEffect = ({ pathLengths, title, description, className }: { pathLengths: MotionValue[]; title?: string; description?: string; className?: string }) => {
+export const GoogleGeminiEffect = ({ pathLengths, description, className }: { pathLengths: MotionValue[]; description?: string; className?: string }) => {
 	return (
 		<div className={cn('sticky top-80', className)}>
-			<p className="text-center text-balance text-4xl font-semibold lg:text-5xl">{title || `Integrated with Google Gemini`}</p>
-			<p className="text-center mx-auto mt-8 max-w-2xl text-balance">
-				{description ||
-					`Scroll through and discover how siKuis transforms the way you make quizzes!`}
+			<p className="text-center text-balance text-4xl font-semibold lg:text-5xl">
+				Integrated with <AuroraText> Google Gemini</AuroraText>
 			</p>
+			<p className="text-center mx-auto mt-8 max-w-2xl text-balance">{description || `Scroll through and discover how siKuis transforms the way you make quizzes!`}</p>
 			<div className="w-full h-[890px] -top-60 md:-top-40  flex items-center justify-center bg-red-transparent absolute ">
 				<button className="rounded-full xl:mt-32 lg:mt-[6rem] md:mt-[4rem] mt-[2.5rem] z-30 w-fit mx-auto ">
 					<div className="relative z-20 rounded-2xl border p-1 h-fit">

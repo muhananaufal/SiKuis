@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Check } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 export default function Pricing() {
 	return (
@@ -41,9 +42,19 @@ export default function Pricing() {
 					</Card>
 
 					<Card className="relative">
-						<span className="bg-linear-to-br/increasing absolute inset-x-0 -top-3 mx-auto flex h-6 w-fit items-center rounded-full bg-[#9359FF] px-3 py-1 text-xs font-medium text-white ring-1 ring-inset ring-white/20 ring-offset-1 ring-offset-gray-950/5">
-							Popular
-						</span>
+						<div className="absolute inset-x-0 -top-3 mx-auto flex h-6 w-fit items-center rounded-full group justify-center px-4 py-1.5 shadow-[inset_0_-8px_10px_#8fdfff1f] transition-shadow duration-500 ease-out hover:shadow-[inset_0_-5px_10px_#8fdfff3f] animate-gradient bg-gradient-to-r from-[#ffaa40]/50 via-[#9c40ff]/50 to-[#ffaa40]/50 bg-[length:300%_100%] ">
+							<span
+								className={cn('absolute inset-0 block h-full w-full animate-gradient rounded-[inherit] bg-gradient-to-r from-[#ffaa40]/50 via-[#9c40ff]/50 to-[#ffaa40]/50 bg-[length:300%_100%] p-[1px]')}
+								style={{
+									WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
+									WebkitMaskComposite: 'destination-out',
+									mask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
+									maskComposite: 'subtract',
+									WebkitClipPath: 'padding-box',
+								}}
+							/>
+							<p className="text-sm font-medium">Popular</p>
+						</div>
 
 						<div className="flex flex-col">
 							<CardHeader>
