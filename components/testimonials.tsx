@@ -86,16 +86,6 @@ const testimonials: Testimonial[] = [
 	},
 ];
 
-const chunkArray = (array: Testimonial[], chunkSize: number): Testimonial[][] => {
-	const result: Testimonial[][] = [];
-	for (let i = 0; i < array.length; i += chunkSize) {
-		result.push(array.slice(i, i + chunkSize));
-	}
-	return result;
-};
-
-const testimonialChunks = chunkArray(testimonials, Math.ceil(testimonials.length / 3));
-
 export default function Testimonials() {
 	return (
 		<section>
@@ -105,29 +95,24 @@ export default function Testimonials() {
 						<h2 className="text-balance text-4xl font-semibold lg:text-5xl">Loved by the Community</h2>
 						<p className="text-body mt-6">Harum quae dolore orrupti aut temporibus ariatur.</p>
 					</div>
-					<div className="mt-8 grid gap-3 sm:grid-cols-2 md:mt-12 lg:grid-cols-3">
-						{testimonialChunks.map((chunk, chunkIndex) => (
-							<div key={chunkIndex} className="space-y-3">
-								{chunk.map(({ name, role, quote, image }, index) => (
-									<Card key={index}>
-										<CardContent className="grid grid-cols-[auto_1fr] gap-3 pt-6">
-											<Avatar className="size-9">
-												<AvatarImage alt={name} src={image} loading="lazy" width="120" height="120" />
-												<AvatarFallback>ST</AvatarFallback>
-											</Avatar>
-
-											<div>
-												<h3 className="font-medium">{name}</h3>
-
-												<span className="text-muted-foreground block text-sm tracking-wide">{role}</span>
-
-												<blockquote className="mt-3">
-													<p className="text-gray-700 dark:text-gray-300">{quote}</p>
-												</blockquote>
-											</div>
-										</CardContent>
-									</Card>
-								))}
+					<div className="columns-1 sm:columns-2 lg:columns-3 space-y-4 mt-8 gap-4 md:mt-12 ">
+						{testimonials.map(({ name, role, quote, image }, index) => (
+							<div key={index} className="break-inside-avoid">
+								<Card>
+									<CardContent className="grid grid-cols-[auto_1fr] gap-3 pt-6">
+										<Avatar className="size-9">
+											<AvatarImage alt={name} src={image} loading="lazy" width="120" height="120" />
+											<AvatarFallback>ST</AvatarFallback>
+										</Avatar>
+										<div>
+											<h3 className="font-medium">{name}</h3>
+											<span className="text-muted-foreground block text-sm tracking-wide">{role}</span>
+											<blockquote className="mt-3">
+												<p className="text-gray-700 dark:text-gray-300">{quote}</p>
+											</blockquote>
+										</div>
+									</CardContent>
+								</Card>
 							</div>
 						))}
 					</div>
