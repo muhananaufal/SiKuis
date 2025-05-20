@@ -99,7 +99,7 @@ export default function PricingComparator() {
 							<tr className="*:py-3">
 								<td className="flex items-center gap-2 font-medium">
 									<Cpu className="size-4" />
-									<span>Features</span>
+									<span>Fitur</span>
 								</td>
 								<td></td>
 								<td className="bg-[#9359FF]/25 border-none px-4"></td>
