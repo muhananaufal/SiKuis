@@ -8,8 +8,8 @@ export type PresetType = 'blur' | 'fade-in-blur' | 'scale' | 'fade' | 'slide';
 export type PerType = 'word' | 'char' | 'line';
 
 export type TextEffectProps = {
-	children: string;
-	per?: PerType;
+	text: string;
+	per?: 'line' | 'word' | 'char';
 	as?: keyof React.JSX.IntrinsicElements;
 	variants?: {
 		container?: Variants;
@@ -99,25 +99,50 @@ const presetVariants: Record<PresetType, { container: Variants; item: Variants }
 	},
 };
 
+const highlightedPhrases = ['Sekali', 'Klik', 'Asyik'];
+function highlightTextSegments(text: string): { text: string; highlight: boolean }[] {
+	const regex = new RegExp(`(${highlightedPhrases.join('|')})`, 'gi');
+	const parts: { text: string; highlight: boolean }[] = [];
+	let lastIndex = 0;
+
+	text.replace(regex, (match, _group, offset) => {
+		if (offset > lastIndex) {
+			parts.push({ text: text.slice(lastIndex, offset), highlight: false });
+		}
+		parts.push({ text: match, highlight: true });
+		lastIndex = offset + match.length;
+		return match;
+	});
+
+	if (lastIndex < text.length) {
+		parts.push({ text: text.slice(lastIndex), highlight: false });
+	}
+
+	return parts;
+}
+
 const AnimationComponent: React.FC<{
-	segment: string;
+	segment: { text: string; highlight: boolean };
 	variants: Variants;
 	per: 'line' | 'word' | 'char';
 	segmentWrapperClassName?: string;
 }> = React.memo(({ segment, variants, per, segmentWrapperClassName }) => {
+	const { text, highlight } = segment;
+	const highlightClass = highlight ? 'text-purple-500' : '';
+
 	const content =
 		per === 'line' ? (
-			<motion.span variants={variants} className="block">
-				{segment}
+			<motion.span variants={variants} className={cn('block', highlightClass)}>
+				{text}
 			</motion.span>
 		) : per === 'word' ? (
-			<motion.span aria-hidden="true" variants={variants} className="inline-block whitespace-pre">
-				{segment}
+			<motion.span aria-hidden="true" variants={variants} className={cn('inline-block whitespace-pre', highlightClass)}>
+				{text}
 			</motion.span>
 		) : (
 			<motion.span className="inline-block whitespace-pre">
-				{segment.split('').map((char, charIndex) => (
-					<motion.span key={`char-${charIndex}`} aria-hidden="true" variants={variants} className="inline-block whitespace-pre">
+				{text.split('').map((char, index) => (
+					<motion.span key={`char-${index}`} variants={variants} className={cn('inline-block whitespace-pre', highlight ? 'text-purple-500' : '')}>
 						{char}
 					</motion.span>
 				))}
@@ -136,8 +161,15 @@ const AnimationComponent: React.FC<{
 AnimationComponent.displayName = 'AnimationComponent';
 
 const splitText = (text: string, per: 'line' | 'word' | 'char') => {
-	if (per === 'line') return text.split('\n');
-	return text.split(/(\s+)/);
+	if (per === 'line') {
+		return text.split('\n').flatMap((line) => highlightTextSegments(line));
+	}
+	if (per === 'word') {
+		const words = text.split(/(\s+)/); // Termasuk spasi
+		return words.flatMap((word) => highlightTextSegments(word));
+	}
+	// per === 'char'
+	return [{ text, highlight: false }];
 };
 
 const hasTransition = (variant: Variant): variant is TargetAndTransition & { transition?: Transition } => {
@@ -171,7 +203,8 @@ const createVariantsWithTransition = (baseVariants: Variants, transition?: Trans
 };
 
 export function TextEffect({
-	children,
+	text,
+	// children,
 	per = 'word',
 	as = 'p',
 	variants,
@@ -188,7 +221,7 @@ export function TextEffect({
 	segmentTransition,
 	style,
 }: TextEffectProps) {
-	const segments = splitText(children, per);
+	const segments = splitText(text, per);
 	const MotionTag = motion[as as keyof typeof motion] as typeof motion.div;
 
 	const baseVariants = preset ? presetVariants[preset] : { container: defaultContainerVariants, item: defaultItemVariants };
@@ -221,9 +254,9 @@ export function TextEffect({
 		<AnimatePresence mode="popLayout">
 			{trigger && (
 				<MotionTag initial="hidden" animate="visible" exit="exit" variants={computedVariants.container} className={className} onAnimationComplete={onAnimationComplete} onAnimationStart={onAnimationStart} style={style}>
-					{per !== 'line' ? <span className="sr-only">{children}</span> : null}
+					{per !== 'line' ? <span className="sr-only">{text}</span> : null}
 					{segments.map((segment, index) => (
-						<AnimationComponent key={`${per}-${index}-${segment}`} segment={segment} variants={computedVariants.item} per={per} segmentWrapperClassName={segmentWrapperClassName} />
+						<AnimationComponent key={`${per}-${index}-${segment.text}`} segment={segment} variants={computedVariants.item} per={per} segmentWrapperClassName={segmentWrapperClassName} />
 					))}
 				</MotionTag>
 			)}

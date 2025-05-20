@@ -13,8 +13,8 @@ export default function SignUp() {
 						<Link href="/" aria-label="go home">
 							<Image src="/logo.png" alt="logo" width="70" height="70" className="dark:invert dark:brightness-200" />
 						</Link>
-						<h1 className="text-title mb-1 mt-4 text-xl font-semibold">Create a SiKuis Account</h1>
-						<p className="text-sm">Welcome! Create an account to get started</p>
+						<h1 className="text-title mb-1 mt-4 text-xl font-semibold">Buat akun SiKuis</h1>
+						<p className="text-sm">Selamat datang! Ayo buat akun untuk memulai</p>
 					</div>
 
 					<div className="mt-6 grid grid-cols-2 gap-3">
@@ -47,13 +47,13 @@ export default function SignUp() {
 						<div className="grid grid-cols-2 gap-3">
 							<div className="space-y-2">
 								<Label htmlFor="firstname" className="block text-sm">
-									Firstname
+									Nama Depan
 								</Label>
 								<Input type="text" required name="firstname" id="firstname" />
 							</div>
 							<div className="space-y-2">
 								<Label htmlFor="lastname" className="block text-sm">
-									Lastname
+									Nama Belakang
 								</Label>
 								<Input type="text" required name="lastname" id="lastname" />
 							</div>
@@ -73,15 +73,15 @@ export default function SignUp() {
 							<Input type="password" required name="pwd" id="pwd" className="input sz-md variant-mixed" />
 						</div>
 
-						<Button className="w-full">Continue</Button>
+						<Button className="w-full">Lanjutkan</Button>
 					</div>
 				</div>
 
 				<div className="bg-muted rounded-(--radius) border p-3">
 					<p className="text-accent-foreground text-center text-sm">
-						Have an account ?
+						Sudah punya akun?
 						<Button asChild variant="link" className="px-2">
-							<Link href="/login">Sign In</Link>
+							<Link href="/login">Masuk</Link>
 						</Button>
 					</p>
 				</div>

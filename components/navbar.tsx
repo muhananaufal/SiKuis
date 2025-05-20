@@ -14,15 +14,15 @@ export const navbarItems = [
 		href: '/',
 	},
 	{
-		title: 'About',
+		title: 'Tentang',
 		href: '/about',
 	},
 	{
-		title: 'Pricing',
+		title: 'Berlangganan',
 		href: '/pricing',
 	},
 	{
-		title: 'Contact',
+		title: 'Kontak',
 		href: '/contact',
 	},
 ];
@@ -141,19 +141,19 @@ export default function Navbar() {
 										</ul>
 									</div>
 									<div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
-										<Button asChild variant="outline" size="sm" className={cn(isScrolled && 'lg:hidden')}>
+										<Button asChild variant="outline" size="sm" className={cn(isScrolled && 'hidden')}>
 											<Link href="/login">
-												<span>Login</span>
+												<span>Masuk</span>
 											</Link>
 										</Button>
-										<Button asChild size="sm" className={cn(isScrolled && 'lg:hidden')}>
+										<Button asChild size="sm" className={cn('bg-[#9359FF]', isScrolled && 'hidden')}>
 											<Link href="/signup">
-												<span>Sign Up</span>
+												<span>Daftar</span>
 											</Link>
 										</Button>
-										<Button asChild size="sm" className={cn(isScrolled ? 'lg:inline-flex' : 'hidden')}>
+										<Button asChild size="sm" className={cn('bg-[#9359FF]', isScrolled ? 'lg:inline-flex' : 'hidden')}>
 											<Link href="/login">
-												<span>Get Started</span>
+												<span>Mulai</span>
 											</Link>
 										</Button>
 									</div>

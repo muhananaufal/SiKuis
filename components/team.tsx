@@ -5,19 +5,19 @@ const members = [
 	{
 		name: 'Syafiq Ilham Sholehudin',
 		role: 'Founder - CEO',
-		avatar: 'https://alt.tailus.io/images/team/member-one.webp',
+		avatar: '/syafiq.jpg',
 		link: '#',
 	},
 	{
 		name: 'Muhana Naufal Al-Atsari',
 		role: 'Co-Founder - CTO',
-		avatar: 'https://alt.tailus.io/images/team/member-two.webp',
+		avatar: '/naufal.jpg',
 		link: '#',
 	},
 	{
 		name: 'Vany Eka Karunia',
-		role: 'Sales Manager',
-		avatar: 'https://alt.tailus.io/images/team/member-three.webp',
+		role: 'Co-Founder - CMO',
+		avatar: '/vany.jpg',
 		link: '#',
 	},
 ];
@@ -26,13 +26,15 @@ export default function Team() {
 	return (
 		<section className="bg-gray-50 py-16 md:py-32 dark:bg-transparent">
 			<div className="mx-auto max-w-5xl border-t px-6">
-				<span className="text-caption -ml-6 -mt-3.5 block w-max bg-gray-50 px-6 dark:bg-gray-950">Team</span>
+				<span className="text-caption -ml-6 -mt-3.5 block w-max bg-gray-50 px-6 dark:bg-gray-950">Tim SiKuis</span>
 				<div className="mt-12 gap-4 sm:grid sm:grid-cols-2 md:mt-24">
 					<div className="sm:w-2/5">
-						<h2 className="text-3xl font-bold sm:text-4xl">Our dream team</h2>
+						<h2 className="text-3xl font-bold sm:text-4xl">
+							Dibalik layar <span className="text-[#9359FF]">SiKuis</span>
+						</h2>
 					</div>
 					<div className="mt-6 sm:mt-0">
-						<p>During the working process, we perform regular fitting with the client because he is the only person who can feel whether a new suit fits or not.</p>
+						<p>Kami adalah sekelompok mahasiswa yang berawal dari obrolan santai dan ide iseng. Saat punya sedikit waktu luang, muncul ide untuk bikin sesuatu yang seru dan bermanfaat, kemudian lahirlah SiKuis.</p>
 					</div>
 				</div>
 				<div className="mt-12 md:mt-24">

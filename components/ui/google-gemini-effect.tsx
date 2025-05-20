@@ -14,9 +14,9 @@ export const GoogleGeminiEffect = ({ pathLengths, description, className }: { pa
 	return (
 		<div className={cn('sticky top-80', className)}>
 			<p className="text-center text-balance text-4xl font-semibold lg:text-5xl">
-				Integrated with <AuroraText> Google Gemini</AuroraText>
+				Terintegrasi Langsung dengan <AuroraText> Google Gemini</AuroraText>
 			</p>
-			<p className="text-center mx-auto mt-8 max-w-2xl text-balance">{description || `Scroll through and discover how siKuis transforms the way you make quizzes!`}</p>
+			<p className="text-center mx-auto mt-8 max-w-5xl text-balance">{description || `Integrasi dengan Google Gemini memungkinkan SiKuis menghadirkan pengalaman belajar adaptif yang didukung teknologi AI terdepan.`}</p>
 			<div className="w-full h-[890px] -top-60 md:-top-40  flex items-center justify-center bg-red-transparent absolute ">
 				<button className="rounded-full xl:mt-32 lg:mt-[6rem] md:mt-[4rem] mt-[2.5rem] z-30 w-fit mx-auto ">
 					<div className="relative z-20 rounded-2xl border p-1 h-fit">

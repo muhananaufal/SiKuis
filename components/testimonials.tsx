@@ -10,79 +10,82 @@ type Testimonial = {
 
 const testimonials: Testimonial[] = [
 	{
-		name: 'Jonathan Yombo',
-		role: 'Software Engineer',
+		name: 'Andi Prasetyo',
+		role: 'Mahasiswa Teknik Informatika',
 		image: 'https://randomuser.me/api/portraits/men/1.jpg',
-		quote: 'Tailus is really extraordinary and very practical, no need to break your head. A real gold mine.',
+		quote: 'SiKuis bantu saya belajar lebih fokus. Materinya padat, kuisnya adaptif, dan terasa seperti punya guru pribadi!',
 	},
 	{
-		name: 'Yves Kalume',
-		role: 'GDE - Android',
+		name: 'Fajar Nugroho',
+		role: 'Pelajar SMA Kelas 12',
 		image: 'https://randomuser.me/api/portraits/men/6.jpg',
-		quote: 'With no experience in webdesign I just redesigned my entire website in a few minutes with tailwindcss thanks to Tailus.',
+		quote: 'Fitur roadmap belajarnya luar biasa. Nggak bingung lagi mau mulai belajar dari mana.',
 	},
 	{
-		name: 'Yucel Faruksahan',
-		role: 'Tailkits Creator',
+		name: 'Rian Alamsyah',
+		role: 'Mahasiswa Ilmu Pemerintahan',
 		image: 'https://randomuser.me/api/portraits/men/7.jpg',
-		quote: 'Great work on tailfolio template. This is one of the best personal website that I have seen so far :)',
+		quote: 'Suka banget sama fitur streak-nya. Jadi makin semangat buat belajar tiap hari!',
 	},
 	{
-		name: 'Anonymous author',
-		role: 'Doing something',
+		name: 'Rizky Alfian',
+		role: 'Mahasiswa Kedokteran',
 		image: 'https://randomuser.me/api/portraits/men/8.jpg',
 		quote:
-			'I am really new to Tailwind and I want to give a go to make some page on my own. I searched a lot of hero pages and blocks online. However, most of them are not giving me a clear view or needed some HTML/CSS coding background to make some changes from the original or too expensive to have. I downloaded the one of Tailus template which is very clear to understand at the start and you could modify the codes/blocks to fit perfectly on your purpose of the page.',
+			'Awalnya saya skeptis karena sudah coba banyak aplikasi belajar. Tapi SiKuis beda. Fitur ringkasan materi otomatis dan kuis adaptif-nya sangat membantu saya dalam memahami materi dengan cepat. Saya bisa mengukur progres belajar dan jadi lebih percaya diri menghadapi ujian.',
 	},
 	{
-		name: 'Shekinah Tshiokufila',
-		role: 'Senior Software Engineer',
+		name: 'Dimas Wicaksono',
+		role: 'Karyawan Swasta',
 		image: 'https://randomuser.me/api/portraits/men/4.jpg',
-		quote: 'Tailus is redefining the standard of web design, with these blocks it provides an easy and efficient way for those who love beauty but may lack the time to implement it. I can only recommend this incredible wonder.',
-	},
-	{
-		name: 'Oketa Fred',
-		role: 'Fullstack Developer',
-		image: 'https://randomuser.me/api/portraits/men/2.jpg',
-		quote: 'I absolutely love Tailus! The component blocks are beautifully designed and easy to use, which makes creating a great-looking website a breeze.',
-	},
-	{
-		name: 'Zeki',
-		role: 'Founder of ChatExtend',
-		image: 'https://randomuser.me/api/portraits/men/5.jpg',
-		quote: "Using TailsUI has been like unlocking a secret design superpower. It's the perfect fusion of simplicity and versatility, enabling us to create UIs that are as stunning as they are user-friendly.",
-	},
-	{
-		name: 'Joseph Kitheka',
-		role: 'Fullstack Developer',
-		image: 'https://randomuser.me/api/portraits/men/9.jpg',
 		quote:
-			'Tailus has transformed the way I develop web applications. Their extensive collection of UI components, blocks, and templates has significantly accelerated my workflow. The flexibility to customize every aspect allows me to create unique user experiences. Tailus is a game-changer for modern web development!',
+			'Sebagai pegawai kantoran yang sedang mempersiapkan ujian sertifikasi, waktu belajar saya sangat terbatas. SiKuis bantu banget karena saya bisa belajar sesuai kemampuan dan waktu yang saya punya. Kuisnya menyesuaikan level saya, dan progress-nya bisa dilacak. Sangat efisien!',
 	},
 	{
-		name: 'Khatab Wedaa',
-		role: 'MerakiUI Creator',
+		name: 'Teguh Ardiansyah',
+		role: 'Guru Les Privat',
+		image: 'https://randomuser.me/api/portraits/men/2.jpg',
+		quote: 'SiKuis itu beda. Nggak cuma bantu hafalan, tapi juga bikin kita ngerti konsepnya.',
+	},
+	{
+		name: 'Arif Santoso',
+		role: 'Siswa Gap Year',
+		image: 'https://randomuser.me/api/portraits/men/5.jpg',
+		quote:
+			'Saya sedang mempersiapkan SBMPTN dan merasa materi terlalu banyak dan melelahkan. Dengan SiKuis, saya bisa memecah materi jadi lebih ringkas dan terstruktur. Roadmap belajarnya seperti peta jalan yang memudahkan saya fokus ke hal penting.',
+	},
+	{
+		name: 'Agung Maulana',
+		role: 'Barista & Mahasiswa Karyawan',
 		image: 'https://randomuser.me/api/portraits/men/10.jpg',
-		quote: "Tailus is an elegant, clean, and responsive tailwind css components it's very helpful to start fast with your project.",
+		quote: 'Platform yang ringan dan gampang diakses. Cocok buat belajar kapan saja, bahkan di HP kentang.',
 	},
 	{
-		name: 'Rodrigo Aguilar',
-		role: 'TailwindAwesome Creator',
+		name: 'Bayu Laksmana',
+		role: 'Mahasiswa Hukum',
 		image: 'https://randomuser.me/api/portraits/men/11.jpg',
-		quote: 'I love Tailus ❤️. The component blocks are well-structured, simple to use, and beautifully designed. It makes it really easy to have a good-looking website in no time.',
+		quote: 'Ringkasan otomatisnya berguna banget. Saya pakai sebelum ujian dan terbukti membantu.',
 	},
 	{
-		name: 'Eric Ampire',
-		role: 'Mobile Engineer at @BRPNews • @GoogleDevExpert for Android',
+		name: 'Hendra Kurniawan',
+		role: 'Guru IPA SMP',
 		image: 'https://randomuser.me/api/portraits/men/12.jpg',
 		quote:
-			'Tailus templates are the perfect solution for anyone who wants to create a beautiful and functional website without any web design experience. The templates are easy to use, customizable, and responsive, and the support team is always available to help. I highly recommend Tailus templates to anyone who is looking to create a website.',
+			'Saya guru SMP dan pakai SiKuis untuk bantu siswa belajar mandiri. Mereka jadi lebih semangat karena aplikasinya interaktif dan tidak membosankan. Bahkan saya sendiri ikut pakai buat belajar topik baru. Ini contoh edtech lokal yang layak didukung!',
 	},
 	{
-		name: 'Roland Tubonge',
-		role: 'Software Engineer',
+		name: 'Ilham Setiawan',
+		role: 'Freelancer Data Analyst',
 		image: 'https://randomuser.me/api/portraits/men/13.jpg',
-		quote: 'Tailus is so well designed that even with a very poor knowledge of web design you can do miracles. Let yourself be seduced!',
+		quote: 'Komunitas belajar di SiKuis bikin saya merasa nggak sendirian dalam belajar.',
+	},
+
+	{
+		name: 'Febrian Nurcahyo',
+		role: 'Desainer Grafis',
+		image: 'https://randomuser.me/api/portraits/men/9.jpg',
+		quote:
+			'Sebagai orang yang sudah bekerja tapi tetap ingin belajar, SiKuis adalah solusi belajar mandiri terbaik yang pernah saya temui. Selain fiturnya cerdas, komunitas di dalamnya juga suportif. Kita bisa diskusi dan saling semangati.',
 	},
 ];
 
@@ -92,8 +95,10 @@ export default function Testimonials() {
 			<div className="py-16 md:py-32">
 				<div className="mx-auto max-w-6xl px-6">
 					<div className="text-center">
-						<h2 className="text-balance text-4xl font-semibold lg:text-5xl">Loved by the Community</h2>
-						<p className="text-body mt-6">Harum quae dolore orrupti aut temporibus ariatur.</p>
+						<h2 className="text-balance text-4xl font-semibold lg:text-5xl">
+							<span className="text-[#9359FF]">Pendapat Mereka</span> Gimana?
+						</h2>
+						<p className="text-body mt-6">Jangan cuma percaya kata kami, dengerin langsung pengalaman mereka setelah pakai SiKuis.</p>
 					</div>
 					<div className="columns-1 sm:columns-2 lg:columns-3 space-y-4 mt-8 gap-4 md:mt-12 ">
 						{testimonials.map(({ name, role, quote, image }, index) => (

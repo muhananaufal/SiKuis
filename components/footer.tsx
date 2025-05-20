@@ -8,113 +8,113 @@ import { usePathname } from 'next/navigation';
 
 const links = [
 	{
-		group: 'Product',
+		group: 'SiKuis',
 		items: [
 			{
-				title: 'Features',
+				title: 'Fitur Utama',
 				href: '#',
 			},
 			{
-				title: 'Solution',
+				title: 'Rencana Harga',
 				href: '#',
 			},
 			{
-				title: 'Customers',
+				title: 'Testimoni',
 				href: '#',
 			},
 			{
-				title: 'Pricing',
+				title: 'FAQ',
 				href: '#',
 			},
 			{
-				title: 'Help',
+				title: 'Komunitas Belajar',
 				href: '#',
 			},
 			{
-				title: 'About',
+				title: 'Mulai Belajar',
 				href: '#',
 			},
 		],
 	},
 	{
-		group: 'Solution',
+		group: 'Solusi Belajar',
 		items: [
 			{
-				title: 'Startup',
+				title: 'Untuk Pelajar',
 				href: '#',
 			},
 			{
-				title: 'Freelancers',
+				title: 'Untuk Mahasiswa',
 				href: '#',
 			},
 			{
-				title: 'Organizations',
+				title: 'Untuk Umum',
 				href: '#',
 			},
 			{
-				title: 'Students',
+				title: 'Untuk Sekolah & Kampus',
 				href: '#',
 			},
 			{
-				title: 'Collaboration',
+				title: 'Untuk Bimbel',
 				href: '#',
 			},
 			{
-				title: 'Design',
+				title: 'Belajar Mandiri',
 				href: '#',
 			},
 			{
-				title: 'Management',
+				title: 'Persiapan Ujian',
 				href: '#',
 			},
 		],
 	},
 	{
-		group: 'Company',
+		group: 'Perusahaan',
 		items: [
 			{
-				title: 'About',
+				title: 'Tentang SiKuis',
 				href: '#',
 			},
 			{
-				title: 'Careers',
+				title: 'Karier',
 				href: '#',
 			},
 			{
-				title: 'Blog',
+				title: 'Blog & Artikel',
 				href: '#',
 			},
 			{
-				title: 'Press',
+				title: 'Hubungi Kami',
 				href: '#',
 			},
 			{
-				title: 'Contact',
+				title: 'Bantuan',
 				href: '#',
 			},
 			{
-				title: 'Help',
+				title: 'Media & Kolaborasi',
 				href: '#',
 			},
 		],
 	},
 	{
-		group: 'Legal',
+		group: 'Kebijakan',
 		items: [
 			{
-				title: 'Licence',
+				title: 'Kebijakan Privasi',
 				href: '#',
 			},
 			{
-				title: 'Privacy',
+				title: 'Ketentuan Layanan',
 				href: '#',
 			},
 			{
-				title: 'Cookies',
+				title: 'Kebijakan Cookie',
 				href: '#',
 			},
 			{
-				title: 'Security',
+				title: 'Keamanan Pengguna',
 				href: '#',
 			},
 		],
@@ -198,8 +198,8 @@ export default function Footer() {
 								))}
 							</div>
 						</div>
-						<div className="mt-12 flex flex-wrap items-end justify-between gap-6 border-t py-6">
-							<small className="text-muted-foreground order-last block text-center text-sm md:order-first">© {new Date().getFullYear()} Tailark, All rights reserved</small>
+						<div className="mt-12 flex flex-wrap justify-between gap-6 border-t py-6 items-center">
+							<small className="text-muted-foreground order-last block text-center text-sm md:order-first ">© {new Date().getFullYear()} SiKuis. Hak cipta dilindungi undang-undang.</small>
 							<div>
 								<div className="relative">
 									<ChevronsUpDown className="pointer-events-none absolute inset-y-0 right-2 my-auto opacity-75" size="0.75rem" />
@@ -210,6 +210,7 @@ export default function Footer() {
 											'aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive'
 										)}
 										name="language"
+										disabled
 									>
 										<option value="1">Indonesia</option>
 										<option value="2">English</option>

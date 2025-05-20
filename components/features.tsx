@@ -1,55 +1,85 @@
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
-import { Settings2, Sparkles, Zap } from 'lucide-react';
+import { Brain, FilePlus2, Flame, Puzzle, Users, Zap } from 'lucide-react';
 import { ReactNode } from 'react';
 
 export default function Features() {
 	return (
 		<section className="bg-zinc-50 py-16 md:py-32 dark:bg-transparent">
-			<div className="@container mx-auto max-w-5xl px-6">
+			<div className="@container mx-auto max-w-7xl px-6">
 				<div className="text-center">
-					<h2 className="text-balance text-4xl font-semibold lg:text-5xl">Built to cover your needs</h2>
-					<p className="mt-4">Libero sapiente aliquam quibusdam aspernatur, praesentium iusto repellendus.</p>
+					<h2 className="text-balance text-4xl font-semibold lg:text-5xl">Solusi Lengkap untuk Kebutuhan Belajarmu</h2>
+					<p className="mt-4">Belajar nggak harus ribet. Semua yang kamu butuhkan dari awal sampai paham, sudah ada di SiKuis. Tinggal mulai aja!</p>
 				</div>
-				<div className="@min-4xl:max-w-full @min-4xl:grid-cols-3 mx-auto mt-8 grid max-w-sm gap-4 *:text-center md:mt-16">
+				<div className="@min-4xl:max-w-5xl @min-4xl:grid-cols-3 mx-auto mt-8 grid max-w-sm gap-4 *:text-center md:mt-16">
+					<Card className="group shadow-zinc-950/5">
+						<CardHeader className="pb-3">
+							<CardDecorator>
+								<FilePlus2 className="size-6" aria-hidden />
+							</CardDecorator>
+							<h3 className="mt-6 font-medium">Ubah Media Jadi Kuis Interaktif</h3>
+						</CardHeader>
+						<CardContent>
+							<p className="text-sm">Konversi berbagai media seperti video, artikel, atau link menjadi kuis seru yang membantu memahami materi lebih cepat dan menyenangkan.</p>
+						</CardContent>
+					</Card>
+
+					<Card className="group shadow-zinc-950/5">
+						<CardHeader className="pb-3">
+							<CardDecorator>
+								<Brain className="size-6" aria-hidden />
+							</CardDecorator>
+							<h3 className="mt-6 font-medium">Roadmap Belajar Personal dengan AI</h3>
+						</CardHeader>
+						<CardContent>
+							<p className="mt-3 text-sm">AI akan menyusun jalur belajar yang disesuaikan dengan kebutuhan dan kemampuanmu, memastikan kamu belajar dengan arah yang jelas dan efektif.</p>
+						</CardContent>
+					</Card>
+
+					<Card className="group shadow-zinc-950/5">
+						<CardHeader className="pb-3">
+							<CardDecorator>
+								<Puzzle className="size-6" aria-hidden />
+							</CardDecorator>
+							<h3 className="mt-6 font-medium">Kuis Adaptif Sesuai Level Pengguna</h3>
+						</CardHeader>
+						<CardContent>
+							<p className="mt-3 text-sm">Dapatkan soal-soal yang sesuai dengan tingkat pemahamanmu. Belajar jadi lebih efisien dan tepat sasaran.</p>
+						</CardContent>
+					</Card>
+
 					<Card className="group shadow-zinc-950/5">
 						<CardHeader className="pb-3">
 							<CardDecorator>
 								<Zap className="size-6" aria-hidden />
 							</CardDecorator>
-
-							<h3 className="mt-6 font-medium">Customizable</h3>
+							<h3 className="mt-6 font-medium">Ringkasan Materi Otomatis</h3>
 						</CardHeader>
-
 						<CardContent>
-							<p className="text-sm">Extensive customization options, allowing you to tailor every aspect to meet your specific needs.</p>
+							<p className="mt-3 text-sm">Tak sempat baca panjang? SiKuis merangkum materi otomatis dengan bantuan AI, sehingga kamu bisa memahami inti informasi dengan cepat.</p>
 						</CardContent>
 					</Card>
 
 					<Card className="group shadow-zinc-950/5">
 						<CardHeader className="pb-3">
 							<CardDecorator>
-								<Settings2 className="size-6" aria-hidden />
+								<Flame className="size-6" aria-hidden />
 							</CardDecorator>
-
-							<h3 className="mt-6 font-medium">You have full control</h3>
+							<h3 className="mt-6 font-medium">Streak Kuis Harian</h3>
 						</CardHeader>
-
 						<CardContent>
-							<p className="mt-3 text-sm">From design elements to functionality, you have complete control to create a unique and personalized experience.</p>
+							<p className="mt-3 text-sm">Tingkatkan konsistensi belajarmu dengan streak kuis harian. Semakin rajin, semakin banyak streak-mu, semakin tinggi motivasimu!</p>
 						</CardContent>
 					</Card>
 
 					<Card className="group shadow-zinc-950/5">
 						<CardHeader className="pb-3">
 							<CardDecorator>
-								<Sparkles className="size-6" aria-hidden />
+								<Users className="size-6" aria-hidden />
 							</CardDecorator>
-
-							<h3 className="mt-6 font-medium">Powered By AI</h3>
+							<h3 className="mt-6 font-medium">Komunitas Belajar Interaktif</h3>
 						</CardHeader>
-
 						<CardContent>
-							<p className="mt-3 text-sm">Elements to functionality, you have complete control to create a unique experience.</p>
+							<p className="mt-3 text-sm">Belajar bareng komunitas! Dapatkan dukungan, berbagi semangat, dan tumbuh bersama dengan pembelajar lainnya dalam satu platform.</p>
 						</CardContent>
 					</Card>
 				</div>

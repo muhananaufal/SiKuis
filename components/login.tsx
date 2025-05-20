@@ -13,8 +13,8 @@ export default function Login() {
 						<Link href="/" aria-label="go home">
 							<Image src="/logo.png" alt="logo" width="70" height="70" className="dark:invert dark:brightness-200" />
 						</Link>
-						<h1 className="mb-1 mt-4 text-xl font-semibold">Sign In to SiKuis</h1>
-						<p className="text-sm">Welcome back! Sign in to continue</p>
+						<h1 className="mb-1 mt-4 text-xl font-semibold">Masuk ke SiKuis</h1>
+						<p className="text-sm">Selamat datang kembali! Masuk untuk melanjutkan</p>
 					</div>
 
 					<div className="mt-6 grid grid-cols-2 gap-3">
@@ -58,22 +58,22 @@ export default function Login() {
 								</Label>
 								<Button asChild variant="link" size="sm">
 									<Link href="/forgot-password" className="link intent-info variant-ghost text-sm">
-										Forgot your Password ?
+										Lupa Password akun kamu?
 									</Link>
 								</Button>
 							</div>
 							<Input type="password" required name="pwd" id="pwd" className="input sz-md variant-mixed" />
 						</div>
 
-						<Button className="w-full">Sign In</Button>
+						<Button className="w-full">Masuk</Button>
 					</div>
 				</div>
 
 				<div className="bg-muted rounded-(--radius) border p-3">
 					<p className="text-accent-foreground text-center text-sm">
-						Don&apos;t have an account ?
+						Belum punya akun SiKuis?
 						<Button asChild variant="link" className="px-2">
-							<Link href="/signup">Create account</Link>
+							<Link href="/signup">Buat akun baru</Link>
 						</Button>
 					</p>
 				</div>
