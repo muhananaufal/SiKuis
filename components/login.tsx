@@ -46,7 +46,7 @@ export default function Login() {
 					<div className="space-y-6">
 						<div className="space-y-2">
 							<Label htmlFor="email" className="block text-sm">
-								Username
+								Email
 							</Label>
 							<Input type="email" required name="email" id="email" />
 						</div>
