@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { ThemeProvider } from 'next-themes';
 import { AnimatedGroup } from '@/components/ui/animated-group';
 import './globals.css';
+import { GoogleTagManager } from '@next/third-parties/google';
+
 import Navbar from '@/components/navbar';
 import Footer from '@/components/footer';
 
@@ -37,6 +39,8 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en" suppressHydrationWarning>
+			<GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS as string} />
+
 			<body className="antialiased">
 				<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
 					<Navbar />
